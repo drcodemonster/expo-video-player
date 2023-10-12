@@ -231,6 +231,7 @@ const VideoPlayer = (tempProps) => {
                     setPlaybackInstanceInfo(Object.assign(Object.assign({}, playbackInstanceInfo), { state: PlaybackStates.Paused }));
                 }
             }} onSlidingComplete={(e) => __awaiter(void 0, void 0, void 0, function* () {
+                props.onSlidingComplete(e);
                 const position = e * playbackInstanceInfo.duration;
                 if (playbackInstance) {
                     yield playbackInstance.setStatusAsync({

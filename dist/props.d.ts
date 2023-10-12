@@ -14,6 +14,7 @@ declare type RequiredProps = {
 declare type DefaultProps = {
     errorCallback: (error: ErrorType) => void;
     playbackCallback: (status: AVPlaybackStatus) => void;
+    onSlidingComplete: (status: Number) => void;
     defaultControlsVisible: boolean;
     timeVisible: boolean;
     textStyle: TextStyle;

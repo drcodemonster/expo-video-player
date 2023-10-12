@@ -28,7 +28,7 @@
         "lint:fix": "eslint \"lib/**/*.{js,ts,tsx}\" --fix"
     },
     "devDependencies": {
-        "@react-native-community/slider": "^4.3.1",
+        "@react-native-community/slider": "^4.4.2",
         "@types/react": "^18.0.21",
         "@types/react-native": "^0.70.4",
         "@typescript-eslint/eslint-plugin": "^5.38.1",
@@ -42,17 +42,17 @@
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-native": "^4.0.0",
         "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
-        "expo": "^46.0.13",
-        "expo-av": "^12.0.4",
+        "expo": "^49.0.0",
+        "expo-av": "^13.4.1",
         "prettier": "^2.7.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-native": "^0.70.1",
+        "react-native": "^0.72.5",
         "typescript": "^4.8.4"
     },
     "peerDependencies": {
-        "@react-native-community/slider": ">=4.0.0",
-        "expo": ">=38.0.0",
+        "@react-native-community/slider": ">=4.4.2",
+        "expo": ">=36.0.0",
         "expo-av": ">=5.0.2"
     },
     "dependencies": {

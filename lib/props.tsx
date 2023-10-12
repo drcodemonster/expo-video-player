@@ -13,6 +13,8 @@ export const defaultProps = {
     console.error(`[VideoPlayer] ${error.type} Error - ${error.message}: ${error.obj}`),
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   playbackCallback: () => {},
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  onSlidingComplete: () => {},
   defaultControlsVisible: false,
   timeVisible: true,
   slider: {
@@ -77,6 +79,7 @@ type RequiredProps = {
 type DefaultProps = {
   errorCallback: (error: ErrorType) => void
   playbackCallback: (status: AVPlaybackStatus) => void
+  onSlidingComplete: (status: Number) => void
   defaultControlsVisible: boolean
   timeVisible: boolean
   textStyle: TextStyle

@@ -304,8 +304,8 @@ const VideoPlayer = (tempProps: Props) => {
       </TouchableWithoutFeedback>
 
       <Animated.View
-          pointerEvents={controlsState === ControlStates.Visible ? 'auto' : 'none'}
-          style={[
+        pointerEvents={controlsState === ControlStates.Visible ? 'auto' : 'none'}
+        style={[
           styles.bottomInfoWrapper,
           {
             opacity: controlsOpacity,
@@ -333,6 +333,7 @@ const VideoPlayer = (tempProps: Props) => {
               }
             }}
             onSlidingComplete={async e => {
+              props.onSlidingComplete(e)
               const position = e * playbackInstanceInfo.duration
               if (playbackInstance) {
                 await playbackInstance.setStatusAsync({

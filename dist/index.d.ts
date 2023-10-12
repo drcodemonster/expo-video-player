@@ -6,6 +6,7 @@ declare const VideoPlayer: {
     defaultProps: {
         errorCallback: (error: import("./constants").ErrorType) => void;
         playbackCallback: (status: AVPlaybackStatus) => void;
+        onSlidingComplete: (status: Number) => void;
         defaultControlsVisible: boolean;
         timeVisible: boolean;
         textStyle: import("react-native").TextStyle;

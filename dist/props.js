@@ -3,6 +3,8 @@ export const defaultProps = {
     errorCallback: error => console.error(`[VideoPlayer] ${error.type} Error - ${error.message}: ${error.obj}`),
     // eslint-disable-next-line @typescript-eslint/no-empty-function
     playbackCallback: () => { },
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    onSlidingComplete: () => { },
     defaultControlsVisible: false,
     timeVisible: true,
     slider: {
