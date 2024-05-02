@@ -48,6 +48,7 @@ For default prop values, please visit [/lib/props.tsx](https://github.com/ihmpav
 | **playbackCallback** |                  (status: AVPlaybackStatus) => void                   | Function which is fired every time `onPlaybackStatusUpdate` occurs |
 
 **onSlidingComplete**| (status: Number) => void | Function which is fired whne slider button picked up and then released |
+**onReadyForDisplay**| (event: VideoReadyForDisplayEvent) => void | Function which is fired when video is ready for display |
 | **defaultControlsVisible** | `boolean` | Show controls on darker overlay when video starts playing. Default is `false` |
 | **timeVisible** | `boolean` | Show current time and final length in the bottom. Default is `true` |
 | **textStyle** | `TextStyle` | Object containing `<Text />` styling |

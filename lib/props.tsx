@@ -1,4 +1,6 @@
 import { AVPlaybackStatus, Video, VideoProps } from 'expo-av'
+import type { VideoReadyForDisplayEvent } from 'expo-av/build/Video.types'
+
 import { ActivityIndicatorProps, Dimensions, Platform, TextStyle } from 'react-native'
 import { ColorValue } from 'react-native'
 import { ErrorType } from './constants'
@@ -15,6 +17,8 @@ export const defaultProps = {
   playbackCallback: () => {},
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   onSlidingComplete: () => {},
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  onReadyForDisplay: () => {},
   defaultControlsVisible: false,
   timeVisible: true,
   slider: {
@@ -79,7 +83,8 @@ type RequiredProps = {
 type DefaultProps = {
   errorCallback: (error: ErrorType) => void
   playbackCallback: (status: AVPlaybackStatus) => void
-  onSlidingComplete: (status: Number) => void
+  onSlidingComplete: (status: number) => void
+  onReadyForDisplay: (event: VideoReadyForDisplayEvent) => void
   defaultControlsVisible: boolean
   timeVisible: boolean
   textStyle: TextStyle

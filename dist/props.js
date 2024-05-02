@@ -5,6 +5,8 @@ export const defaultProps = {
     playbackCallback: () => { },
     // eslint-disable-next-line @typescript-eslint/no-empty-function
     onSlidingComplete: () => { },
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    onReadyForDisplay: () => { },
     defaultControlsVisible: false,
     timeVisible: true,
     slider: {

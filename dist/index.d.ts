@@ -1,12 +1,13 @@
-import { AVPlaybackStatus } from 'expo-av';
+import { AVPlaybackStatus, VideoReadyForDisplayEvent } from 'expo-av';
 import { Props } from './props';
 import React from 'react';
 declare const VideoPlayer: {
-    (tempProps: Props): JSX.Element;
+    (tempProps: Props): React.JSX.Element;
     defaultProps: {
         errorCallback: (error: import("./constants").ErrorType) => void;
         playbackCallback: (status: AVPlaybackStatus) => void;
-        onSlidingComplete: (status: Number) => void;
+        onSlidingComplete: (status: number) => void;
+        onReadyForDisplay: (event: VideoReadyForDisplayEvent) => void;
         defaultControlsVisible: boolean;
         timeVisible: boolean;
         textStyle: import("react-native").TextStyle;

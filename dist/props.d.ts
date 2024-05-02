@@ -1,20 +1,22 @@
 import { AVPlaybackStatus, Video, VideoProps } from 'expo-av';
+import type { VideoReadyForDisplayEvent } from 'expo-av/build/Video.types';
 import { ActivityIndicatorProps, TextStyle } from 'react-native';
 import { ColorValue } from 'react-native';
 import { ErrorType } from './constants';
 import { MutableRefObject, ReactNode } from 'react';
 import { SliderProps } from '@react-native-community/slider';
-export declare type Props = RequiredProps & DefaultProps;
+export type Props = RequiredProps & DefaultProps;
 export declare const defaultProps: DefaultProps;
-declare type RequiredProps = {
+type RequiredProps = {
     videoProps: VideoProps & {
         ref?: MutableRefObject<Video>;
     };
 };
-declare type DefaultProps = {
+type DefaultProps = {
     errorCallback: (error: ErrorType) => void;
     playbackCallback: (status: AVPlaybackStatus) => void;
-    onSlidingComplete: (status: Number) => void;
+    onSlidingComplete: (status: number) => void;
+    onReadyForDisplay: (event: VideoReadyForDisplayEvent) => void;
     defaultControlsVisible: boolean;
     timeVisible: boolean;
     textStyle: TextStyle;

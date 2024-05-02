@@ -3,12 +3,12 @@ import React from 'react';
 export declare const ErrorMessage: ({ message, style }: {
     message: string;
     style: TextStyle;
-}) => JSX.Element;
+}) => React.JSX.Element;
 export declare const getMinutesSecondsFromMilliseconds: (ms: number) => string;
-declare type ButtonProps = (TouchableNativeFeedbackProps | TouchableOpacityProps) & {
+type ButtonProps = (TouchableNativeFeedbackProps | TouchableOpacityProps) & {
     children: React.ReactNode;
 };
-export declare const TouchableButton: (props: ButtonProps) => JSX.Element;
+export declare const TouchableButton: (props: ButtonProps) => React.JSX.Element;
 export declare const deepMerge: (target: {
     [x: string]: any;
 }, source: {

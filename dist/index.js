@@ -1,5 +1,5 @@
 import { __awaiter, __rest } from "tslib";
-import { Audio, Video } from 'expo-av';
+import { Audio, ResizeMode, Video } from 'expo-av';
 import { ActivityIndicator, Animated, StyleSheet, Text, TouchableWithoutFeedback, View, } from 'react-native';
 import { ControlStates, ErrorSeverity, PlaybackStates } from './constants';
 import { ErrorMessage, TouchableButton, deepMerge, getMinutesSecondsFromMilliseconds, styles, } from './utils';
@@ -53,6 +53,9 @@ const VideoPlayer = (tempProps) => {
             setPlaybackInstanceInfo(Object.assign(Object.assign({}, playbackInstanceInfo), { state: PlaybackStates.Playing }));
         }
     }, [props.videoProps.source]);
+    const onReadyForDisplay = (e) => {
+        props.onReadyForDisplay(e);
+    };
     const hideAnimation = () => {
         Animated.timing(controlsOpacity, {
             toValue: 0,
@@ -176,7 +179,7 @@ const VideoPlayer = (tempProps) => {
             if (props.videoProps.ref) {
                 props.videoProps.ref.current = component;
             }
-        }} onPlaybackStatusUpdate={updatePlaybackCallback}/>
+        }} onPlaybackStatusUpdate={updatePlaybackCallback} onReadyForDisplay={onReadyForDisplay} resizeMode={ResizeMode.CONTAIN}/>
 
       <Animated.View pointerEvents={controlsState === ControlStates.Visible ? 'auto' : 'none'} style={[
             styles.topInfoWrapper,

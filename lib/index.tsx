@@ -1,4 +1,4 @@
-import { AVPlaybackStatus, Audio, Video } from 'expo-av'
+import { AVPlaybackStatus, Audio, ResizeMode, Video, VideoReadyForDisplayEvent } from 'expo-av'
 import {
   ActivityIndicator,
   Animated,
@@ -77,7 +77,9 @@ const VideoPlayer = (tempProps: Props) => {
       setPlaybackInstanceInfo({ ...playbackInstanceInfo, state: PlaybackStates.Playing })
     }
   }, [props.videoProps.source])
-
+  const onReadyForDisplay = (e: VideoReadyForDisplayEvent) => {
+    props.onReadyForDisplay(e)
+  }
   const hideAnimation = () => {
     Animated.timing(controlsOpacity, {
       toValue: 0,
@@ -240,6 +242,8 @@ const VideoPlayer = (tempProps: Props) => {
           }
         }}
         onPlaybackStatusUpdate={updatePlaybackCallback}
+        onReadyForDisplay={onReadyForDisplay}
+        resizeMode={ResizeMode.CONTAIN}
       />
 
       <Animated.View
