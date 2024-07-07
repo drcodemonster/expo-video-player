@@ -1,6 +1,6 @@
 {
     "name": "expo-video-player",
-    "version": "2.2.1",
+    "version": "2.2.2",
     "private": false,
     "description": "Customizable Video Player controls for Expo",
     "keywords": [
@@ -47,11 +47,11 @@
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-native": "^4.0.0",
         "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
-        "expo": "~50.0.17",
+        "expo": "~50.0.19",
         "expo-av": "~13.10.6",
         "prettier": "^2.7.1",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
         "react-native": "0.73.6",
         "typescript": "^5.1.3"
     },

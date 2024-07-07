@@ -7,7 +7,7 @@ export const defaultProps = {
     onSlidingComplete: () => { },
     // eslint-disable-next-line @typescript-eslint/no-empty-function
     onReadyForDisplay: () => { },
-    defaultControlsVisible: false,
+    defaultControlsVisible: true,
     timeVisible: true,
     slider: {
         visible: true,
@@ -45,7 +45,7 @@ export const defaultProps = {
         exitFullscreen: () => 
         // eslint-disable-next-line no-console
         console.log('[VideoPlayer] - missing `exitFullscreen` function in `fullscreen` prop'),
-        inFullscreen: false,
+        inFullscreen: true,
         visible: true,
     },
     autoHidePlayer: true,
